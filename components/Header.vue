@@ -150,4 +150,11 @@ export default Vue.extend({
 #header .el-dropdown {
   color: #023a59;
 }
+@media (max-width: 990px) {
+  #header .el-input-group {
+    height: 58px;
+    width: 300px;
+    background: #f1f1f1;
+  }
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <main class="min-h-screen">
     <div class="top-0 w-full h-10 bg-white"></div>
-    <div class="w-full h-full relative">
+    <div class="w-full h-full relative hidden md:block">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31716.944670037148!2d3.4347603500000004!3d6.44306085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1674115222850!5m2!1sen!2sng"
         width="100%"
@@ -52,7 +52,29 @@
         </div>
       </div>
     </div>
-    
+    <div class="block md:hidden">
+      <div>
+        <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+          <el-tab-pane label="Tasks" name="first">
+            <div v-for="i in 12" :key="i">
+              <SingleTask />
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="Agents" name="second">
+            <Agents />
+          </el-tab-pane>
+        </el-tabs>
+      </div>
+      <div>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31716.944670037148!2d3.4347603500000004!3d6.44306085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1674115222850!5m2!1sen!2sng"
+        width="100%"
+        height="500"
+        style="border: 0"
+        loading="lazy"
+      ></iframe>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -60,16 +82,19 @@
 import Vue from 'vue'
 import Tasks from '@/components/Tasks.vue'
 import Agents from '@/components/Agents/Agent.vue'
+import SingleTask from "@/components/SingleTasks.vue";
 
 export default Vue.extend({
   name: 'IndexPage',
   components: {
     Tasks,
     Agents,
+    SingleTask,
   },
   layout: 'dashboard',
   data() {
     return {
+      activeName: "first",
       active_left: true,
       active_right: true,
       rotate_left: false,
@@ -84,6 +109,9 @@ export default Vue.extend({
     toggleRight() {
       this.active_right = !this.active_right;
       this.rotate_right = !this.rotate_right;
+    },
+    handleClick(tab: any, event: any) {
+      console.log(tab, event);
     },
   },
 })
@@ -127,6 +155,40 @@ export default Vue.extend({
   width: 351px !important;
   transition: 0.5s;
   overflow: scroll;
+}
+
+* >>> .el-tabs--card>.el-tabs__header .el-tabs__nav {
+  border: 0px;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  box-sizing: border-box;
+}
+* >>> .el-tabs--card>.el-tabs__header .el-tabs__item {
+  border-left: 0px;
+}
+
+* >>> .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+  border-bottom-color: transparent !important;
+  background: #ffffff;
+}
+
+
+* >>> .el-tabs--card>.el-tabs__header .el-tabs__item {
+  text-align: center;
+  width: 50% !important;
+}
+
+* >>> .el-tabs--card>.el-tabs__header .el-tabs__nav {
+  padding: 0.6rem;
+  width: 100%;
+}
+
+@media (max-width: 990px) {
+  .el-tabs--card>.el-tabs__header .el-tabs__item {
+    text-align: center;
+    width: 50% !important;
+    border-radius: 5px;
+  }
 }
 
 </style>

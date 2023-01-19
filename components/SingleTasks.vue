@@ -4,7 +4,7 @@
 			<div class="bg-primary rounded-full w-8 h-8 flex justify-center items-center">
 				<i class="text-white el-icon-plus font-black"></i>
 			</div>
-			<span class="text-grayLighter text-sm">Assign Agent</span>
+			<span class="text-grayLighter text-xs md:text-sm leading-3">Assign Agent</span>
 		</div>
     <div class="flex items-center justify-between w-full">
       <div class="w-11/12 text-sm">
