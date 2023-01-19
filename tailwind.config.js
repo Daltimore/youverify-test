@@ -22,9 +22,8 @@ module.exports = {
       },
       textColor: {
         secondary: "#C2E2E9",
-        darkPrimary: "#0F808C",
-        grayLight: "#ACB6BE",
-        grayLighter: "#828282"
+        primary: "#0F808C",
+        lightgrey: "#ACB6BE",
       }
     },
   },

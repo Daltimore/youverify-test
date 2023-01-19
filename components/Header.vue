@@ -19,7 +19,7 @@
         "
       >
         <i
-          :class="`${rotate} sidebarIcon text-darkPrimary el-icon-back cursor-pointer`"
+          :class="`${rotate} sidebarIcon text-primary el-icon-back cursor-pointer`"
           @click="toggleSidebar"
         ></i>
       </div>
