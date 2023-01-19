@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="bg-primaryDark py-5 px-8">
+    <div class="bg-dark py-5 px-8">
       <h1 class="font-bold text-secondary">Cheta And Daughters Limited</h1>
       <span class="text-secondary">RC123456789</span>
     </div>

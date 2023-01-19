@@ -41,7 +41,7 @@
 
     <div>
       <div class="flex items-center">
-        <div class="hidden md:block relative p-2 rounded-lg bg-primaryLight">
+        <div class="hidden md:block relative p-2 rounded-lg bg-light">
           <Notify />
           <span
             class="
@@ -51,7 +51,7 @@
               justify-center
               items-center
               rounded-full
-              bg-redDark
+              bg-red
               absolute
               top-0
               right-0
@@ -72,8 +72,6 @@
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>Profile</el-dropdown-item>
-            <el-dropdown-item>Notification</el-dropdown-item>
-            <el-dropdown-item>Settings</el-dropdown-item>
             <el-dropdown-item divided>Logout</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
