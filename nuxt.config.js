@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
   head: {
     title: 'youverify-test',
     htmlAttrs: {
@@ -41,6 +42,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [/^element-ui/],
     postcss: {
       plugins: {
         'postcss-import': {},
