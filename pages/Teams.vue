@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen">
-    <h1 class="text-2xl text-black py-6 text-center">This is the agents page</h1>
+    <h1 class="text-2xl text-black py-6 text-center">This is the teams page</h1>
   </div>
 </template>
 
@@ -8,8 +8,8 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'dashboard',
-});
+  layout: 'dashboard'
+})
 </script>
 
 <style></style>
